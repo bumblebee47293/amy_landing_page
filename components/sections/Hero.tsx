@@ -115,16 +115,16 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="relative mb-10 lg:mb-12"
         >
-          <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 animate-float will-change-transform">
-            {/* Glow ring */}
-            <div className="absolute inset-[-20px] lg:inset-[-30px] rounded-full bg-gold/8 blur-2xl" />
-            <div className="absolute inset-[-8px] lg:inset-[-12px] rounded-full bg-gold/10 blur-xl" />
+          <div className="relative w-56 sm:w-64 lg:w-80 xl:w-96 aspect-[4/5] animate-float will-change-transform">
+            {/* Rectangular glow */}
+            <div className="absolute inset-[-20px] lg:inset-[-30px] bg-gold/8 blur-2xl" />
+            <div className="absolute inset-[-8px] lg:inset-[-12px] bg-gold/10 blur-xl" />
             
             <Image
               src="/images/logo.jpg"
               alt="Amy Teaches"
               fill
-              className="rounded-full object-cover shadow-gold"
+              className="object-cover shadow-gold"
               priority
               sizes="(max-width: 640px) 224px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 384px"
             />
