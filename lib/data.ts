@@ -45,92 +45,80 @@ export const products: Product[] = [
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "how-to-build-a-consistent-language-learning-habit",
-    title: "How to Build a Consistent Language Learning Habit",
+    slug: "how-to-learn-without-burnout",
+    title: "How to Learn Without Burnout",
     excerpt:
-      "Discover the gentle, sustainable approach to language learning that focuses on small daily actions rather than overwhelming intensity.",
+      "Discover the gentle, sustainable approach to learning that focuses on small daily actions rather than overwhelming intensity. Protect your energy while making real progress.",
     content: `
 ## The Power of Small Steps
 
-Learning a language doesn't have to feel overwhelming. In fact, the most successful language learners I know take a gentle, consistent approach rather than trying to cram everything at once.
+Learning doesn't have to feel overwhelming. In fact, the most successful learners take a gentle, consistent approach rather than trying to cram everything at once.
 
 ## Start With Just 15 Minutes
 
-The key to building any habit is starting small. Fifteen minutes of focused practice every day will take you further than two hours once a week. Your brain needs time to process and consolidate what you're learning.
+The key to building any habit is starting small. Fifteen minutes of focused practice every day will take you further than two hours once a week.
 
 ## Create a Ritual Around Learning
 
-When you attach language learning to an existing habit, it becomes automatic. Study while you drink your morning coffee, or review vocabulary during your commute. These small moments add up to significant progress.
+When you attach learning to an existing habit, it becomes automatic. Study while you drink your morning coffee, or review vocabulary during your commute.
 
-## Embrace the Mistakes
+## Embrace the Process
 
-Language learning is inherently messy. You'll mispronounce words, forget grammar rules, and struggle to express yourself. This isn't failure—it's the process of rewiring your brain to think in a new way.
-
-## Find Joy in the Journey
-
-Choose content that genuinely interests you. Watch shows you enjoy, read books you love, listen to music that moves you. When learning feels like a treat rather than a chore, consistency becomes natural.
+Learning is inherently messy. You'll forget things, struggle with concepts, and feel like you're not making progress. This isn't failure—it's the process of growth.
     `,
-    category: "Language Learning",
-    date: "2026-05-10",
-    coverImage: "/images/blog-language.jpg",
-    tags: ["habits", "language learning", "consistency"],
+    category: "Mindful Learning",
+    date: "2026-05-15",
+    coverImage: "/images/blog-burnout.jpg",
+    tags: ["burnout", "mindful learning", "consistency"],
   },
   {
-    slug: "the-art-of-slow-productivity",
-    title: "The Art of Slow Productivity",
+    slug: "romanticizing-slow-growth",
+    title: "Romanticizing Slow Growth",
     excerpt:
-      "Why doing less can actually help you achieve more. A gentle reframe of productivity that prioritizes depth over speed and quality over quantity.",
+      "Why embracing the journey of gradual progress can transform your relationship with learning and self-development. Find beauty in the process, not just the outcome.",
     content: `
-## Redefining Productivity
+## Redefining Growth
 
-We've been sold a myth that productivity means doing more, faster. But the most meaningful work comes from depth, not speed. Slow productivity is about doing fewer things, but doing them better.
+We've been sold a myth that growth means rapid transformation. But the most meaningful progress comes from depth, not speed.
 
-## The Cost of Constant Busyness
+## The Beauty of Seasons
 
-When you're always rushing from one task to the next, you never give yourself the space to think creatively. Your best ideas often come in the quiet moments between activities.
+Instead of trying to maintain peak performance year-round, consider working in seasons. Some months are for deep learning, others for reflection.
 
-## Working in Seasons
+## Finding Joy in the Journey
 
-Instead of trying to maintain peak performance year-round, consider working in seasons. Some months are for deep creative work, others for planning and reflection. This rhythm prevents burnout.
-
-## Protecting Your Attention
-
-Your attention is your most valuable resource. Guard it fiercely. Turn off notifications, create boundaries around your work time, and give yourself permission to be fully present with one task at a time.
-    `,
-    category: "Productivity",
-    date: "2026-05-05",
-    coverImage: "/images/blog-productivity.jpg",
-    tags: ["productivity", "mindfulness", "slow living"],
-  },
-  {
-    slug: "journaling-prompts-for-self-growth",
-    title: "Journaling Prompts for Self-Growth",
-    excerpt:
-      "Thoughtful prompts to help you reflect, process, and grow. Use these questions to deepen your self-awareness and move forward with clarity.",
-    content: `
-## Why Journaling Works
-
-Writing slows down your thinking. It creates a space between your thoughts and your reactions, allowing you to process emotions and gain perspective on your experiences.
-
-## Prompts for Self-Reflection
-
-- What am I avoiding, and why?
-- What would I do if I knew I couldn't fail?
-- What values am I living by right now?
-- When do I feel most like myself?
-- What am I grateful for that I usually take for granted?
-
-## Prompts for Growth
-
-- What skill would I learn if I had unlimited time?
-- Who do I want to become in the next year?
-- What boundaries do I need to set?
-- How do I want to feel, and what's one small step toward that?
+Choose content that genuinely interests you. When learning feels like a treat rather than a chore, consistency becomes natural.
     `,
     category: "Self-Growth",
-    date: "2026-04-28",
-    coverImage: "/images/blog-journaling.jpg",
-    tags: ["journaling", "self-growth", "reflection"],
+    date: "2026-05-08",
+    coverImage: "/images/blog-slow-growth.jpg",
+    tags: ["slow growth", "mindfulness", "joy"],
+  },
+  {
+    slug: "quiet-confidence-habits",
+    title: "Quiet Confidence Habits",
+    excerpt:
+      "Build unshakeable self-assurance through small, consistent practices that honor who you are. No grand gestures needed—just gentle daily commitments to yourself.",
+    content: `
+## What is Quiet Confidence?
+
+Quiet confidence isn't loud or performative. It's the steady knowing that you are capable, worthy, and enough exactly as you are.
+
+## Daily Practices
+
+- Keep a "wins" journal
+- Speak to yourself with kindness
+- Set boundaries with grace
+- Celebrate small victories
+
+## Building Lasting Change
+
+Your attention is your most valuable resource. Guard it fiercely and invest it in practices that build you up.
+    `,
+    category: "Confidence",
+    date: "2026-04-30",
+    coverImage: "/images/blog-confidence.jpg",
+    tags: ["confidence", "habits", "self-worth"],
   },
   {
     slug: "creating-a-calm-morning-routine",
@@ -144,11 +132,7 @@ How you start your day influences everything that follows. A calm morning routin
 
 ## Start the Night Before
 
-A good morning begins the evening before. Prepare what you can: lay out clothes, prep breakfast, review your priorities. This removes decision fatigue when you wake up.
-
-## The First Hour Matters
-
-Try to spend the first hour of your day without checking your phone. This protects your mind from external demands and lets you set your own intentions for the day.
+A good morning begins the evening before. Prepare what you can: lay out clothes, prep breakfast, review your priorities.
 
 ## Simple Rituals
 

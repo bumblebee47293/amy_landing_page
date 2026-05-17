@@ -16,11 +16,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Amy Teaches | Learn Softly. Grow Consistently.",
+    default: "Amy Teaches | Soft Learning. Thoughtful Growth.",
     template: "%s | Amy Teaches",
   },
   description:
-    "A calm space for learning, productivity, language growth, and self-development. Discover thoughtful resources, digital products, and insights from Amy.",
+    "Soft learning, thoughtful growth, and digital resources for a calmer life. Discover celestial-inspired tools for gentle self-development.",
   keywords: [
     "learning",
     "productivity",
@@ -31,6 +31,8 @@ export const metadata: Metadata = {
     "digital products",
     "study planners",
     "journaling",
+    "mindful learning",
+    "soft growth",
   ],
   authors: [{ name: "Amy" }],
   openGraph: {
