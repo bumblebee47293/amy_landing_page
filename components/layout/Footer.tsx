@@ -1,23 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Twitter, Youtube, Mail, ArrowUpRight, Star } from "lucide-react";
-
-function MoonIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-    </svg>
-  );
-}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,11 +18,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="md:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-2.5 group">
-              <MoonIcon className="w-5 h-5 text-gold transition-transform duration-300 group-hover:rotate-12" />
-              <span className="font-serif text-2xl font-medium text-navy group-hover:text-gold-muted transition-colors">
-                Amy Teaches
-              </span>
+            <Link href="/" className="inline-flex items-center group">
+              <div className="relative w-28 sm:w-32 aspect-[4/3] overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="Amy Teaches"
+                  fill
+                  className="object-contain"
+                  sizes="128px"
+                />
+              </div>
             </Link>
             <p className="mt-5 text-soft-gray text-sm leading-[1.8] max-w-sm">
               A calm space for learning, productivity, and self-development.
@@ -104,7 +94,17 @@ export function Footer() {
               href="#newsletter"
               className="inline-flex items-center mt-4 text-sm font-medium text-navy hover:text-gold-muted transition-colors group"
             >
-              <MoonIcon className="w-4 h-4 mr-2 text-gold-muted" />
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-4 h-4 mr-2 text-gold-muted"
+              >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
               Subscribe now
               <ArrowUpRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>

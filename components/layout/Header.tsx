@@ -3,6 +3,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -12,22 +13,6 @@ const navLinks = [
   { href: "/shop/", label: "Shop" },
   { href: "/about/", label: "About" },
 ];
-
-function MoonIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-    </svg>
-  );
-}
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,12 +37,18 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-14 lg:h-16">
-          {/* Tiny Brand Mark */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <MoonIcon className="w-5 h-5 text-gold transition-transform duration-300 group-hover:rotate-12" />
-            <span className="font-serif text-base lg:text-lg font-medium text-navy tracking-tight">
-              Amy Teaches
-            </span>
+          {/* Small logo image */}
+          <Link href="/" className="flex items-center group">
+            <div className="relative w-20 sm:w-24 aspect-[4/3] overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
+              <Image
+                src="/images/logo.jpg"
+                alt="Amy Teaches"
+                fill
+                className="object-contain"
+                sizes="96px"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
