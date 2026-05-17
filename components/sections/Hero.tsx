@@ -115,18 +115,18 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="relative mb-10 lg:mb-12"
         >
-          <div className="relative w-56 sm:w-64 lg:w-80 xl:w-96 aspect-[4/5] animate-float will-change-transform">
+          <div className="relative w-72 sm:w-96 lg:w-[28rem] xl:w-[32rem] aspect-[3/2] animate-float will-change-transform">
             {/* Rectangular glow */}
-            <div className="absolute inset-[-20px] lg:inset-[-30px] bg-gold/8 blur-2xl" />
-            <div className="absolute inset-[-8px] lg:inset-[-12px] bg-gold/10 blur-xl" />
-            
+            <div className="absolute inset-[-16px] lg:inset-[-24px] bg-gold/8 blur-2xl" />
+            <div className="absolute inset-[-6px] lg:inset-[-10px] bg-gold/10 blur-xl" />
+
             <Image
               src="/images/logo.jpg"
               alt="Amy Teaches"
               fill
-              className="object-cover shadow-gold"
+              className="object-contain"
               priority
-              sizes="(max-width: 640px) 224px, (max-width: 1024px) 256px, (max-width: 1280px) 320px, 384px"
+              sizes="(max-width: 640px) 288px, (max-width: 1024px) 384px, (max-width: 1280px) 448px, 512px"
             />
           </div>
         </motion.div>
