@@ -3,7 +3,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +12,22 @@ const navLinks = [
   { href: "/shop/", label: "Shop" },
   { href: "/about/", label: "About" },
 ];
+
+function MoonIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+    </svg>
+  );
+}
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,46 +46,41 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-cream/85 backdrop-blur-xl shadow-soft border-b border-gold/10"
+          ? "bg-cream/80 backdrop-blur-xl shadow-[0_1px_20px_-4px_rgba(11,29,58,0.06)]"
           : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center space-x-3">
-            <Image
-              src="/images/logo.jpg"
-              alt="Amy Teaches"
-              width={40}
-              height={40}
-              className="rounded-full object-cover"
-            />
-            <span className="font-serif text-xl lg:text-2xl font-medium text-navy tracking-tight">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-14 lg:h-16">
+          {/* Tiny Brand Mark */}
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <MoonIcon className="w-5 h-5 text-gold transition-transform duration-300 group-hover:rotate-12" />
+            <span className="font-serif text-base lg:text-lg font-medium text-navy tracking-tight">
               Amy Teaches
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-stone-muted hover:text-navy transition-colors duration-300 text-sm font-medium tracking-wide relative group"
+                className="relative text-sm font-medium tracking-wide text-stone-muted hover:text-navy transition-colors duration-300 group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gold transition-all duration-300 ease-out group-hover:w-full" />
               </Link>
             ))}
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-navy hover:text-gold transition-colors"
+            className="md:hidden p-2 text-navy hover:text-gold transition-colors duration-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
@@ -78,11 +88,11 @@ export function Header() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "md:hidden bg-cream/95 backdrop-blur-xl border-b border-gold/10 overflow-hidden transition-all duration-500",
-          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          "md:hidden bg-cream/95 backdrop-blur-xl overflow-hidden transition-all duration-500",
+          mobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <nav className="px-4 py-6 space-y-4">
+        <nav className="px-6 py-6 space-y-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}

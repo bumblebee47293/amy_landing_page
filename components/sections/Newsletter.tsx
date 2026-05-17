@@ -19,18 +19,19 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-28 lg:py-36 bg-navy relative overflow-hidden">
-      {/* Celestial glow */}
-      <div className="absolute inset-0 bg-celestial-glow opacity-50" />
+    <section id="newsletter" className="py-32 lg:py-40 bg-navy relative overflow-hidden">
+      <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-3xl" />
 
       {/* Stars */}
-      <div className="absolute top-20 left-[15%] w-1 h-1 bg-gold/60 rounded-full animate-pulse" />
-      <div className="absolute top-32 right-[20%] w-1 h-1 bg-gold/40 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }} />
-      <div className="absolute bottom-24 left-[25%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-      <div className="absolute bottom-32 right-[15%] w-1 h-1 bg-gold/30 rounded-full animate-pulse" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute top-24 left-[12%] w-1 h-1 bg-gold/60 rounded-full animate-twinkle" />
+      <div className="absolute top-36 right-[18%] w-1 h-1 bg-gold/40 rounded-full animate-twinkle-slow" />
+      <div className="absolute bottom-28 left-[22%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-fast" />
+      <div className="absolute bottom-36 right-[12%] w-1 h-1 bg-gold/30 rounded-full animate-twinkle" />
+      <div className="absolute top-1/3 left-[8%] w-1 h-1 bg-gold/20 rounded-full animate-twinkle-slow" />
+      <div className="absolute top-2/3 right-[8%] w-1 h-1 bg-gold/25 rounded-full animate-twinkle-fast" />
 
-      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

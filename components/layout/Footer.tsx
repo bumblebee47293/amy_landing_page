@@ -1,8 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { Instagram, Twitter, Youtube, Mail, ArrowUpRight, Star, Moon } from "lucide-react";
+import { Instagram, Twitter, Youtube, Mail, ArrowUpRight, Star } from "lucide-react";
+
+function MoonIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+    </svg>
+  );
+}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,23 +25,16 @@ export function Footer() {
   return (
     <footer className="bg-cream-dark border-t border-gold/10 relative overflow-hidden">
       {/* Subtle celestial accents */}
-      <div className="absolute top-12 right-[10%] w-1 h-1 bg-gold/50 rounded-full animate-pulse" />
-      <div className="absolute bottom-20 left-[8%] w-1 h-1 bg-gold/30 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-      <div className="absolute top-1/2 right-[5%] w-1.5 h-1.5 bg-gold/20 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }} />
+      <div className="absolute top-16 right-[10%] w-1 h-1 bg-gold/50 rounded-full animate-twinkle" />
+      <div className="absolute bottom-24 left-[8%] w-1 h-1 bg-gold/30 rounded-full animate-twinkle-slow" />
+      <div className="absolute top-1/2 right-[5%] w-1.5 h-1.5 bg-gold/20 rounded-full animate-twinkle-fast" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="md:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="relative w-10 h-10">
-                <Image
-                  src="/images/logo.jpg"
-                  alt="Amy Teaches"
-                  fill
-                  className="rounded-full object-cover"
-                />
-              </div>
+            <Link href="/" className="inline-flex items-center gap-2.5 group">
+              <MoonIcon className="w-5 h-5 text-gold transition-transform duration-300 group-hover:rotate-12" />
               <span className="font-serif text-2xl font-medium text-navy group-hover:text-gold-muted transition-colors">
                 Amy Teaches
               </span>
@@ -96,7 +104,7 @@ export function Footer() {
               href="#newsletter"
               className="inline-flex items-center mt-4 text-sm font-medium text-navy hover:text-gold-muted transition-colors group"
             >
-              <Moon className="w-4 h-4 mr-2 text-gold-muted" />
+              <MoonIcon className="w-4 h-4 mr-2 text-gold-muted" />
               Subscribe now
               <ArrowUpRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>

@@ -8,12 +8,15 @@ import { ShoppingBag, ArrowRight, Star } from "lucide-react";
 
 export function FeaturedProducts() {
   return (
-    <section className="py-28 lg:py-36 bg-cream relative overflow-hidden">
-      {/* Subtle celestial accents */}
-      <div className="absolute top-20 right-[5%] w-1 h-1 bg-gold rounded-full animate-pulse" />
-      <div className="absolute bottom-32 left-[8%] w-1.5 h-1.5 bg-gold/60 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+    <section className="py-32 lg:py-40 bg-cream relative overflow-hidden">
+      <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle celestial accents */}
+      <div className="absolute top-24 right-[8%] w-1.5 h-1.5 bg-gold rounded-full animate-twinkle" />
+      <div className="absolute top-40 left-[6%] w-1 h-1 bg-gold/60 rounded-full animate-twinkle-slow" />
+      <div className="absolute bottom-36 right-[12%] w-1 h-1 bg-gold/80 rounded-full animate-twinkle-fast" />
+
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +48,6 @@ export function FeaturedProducts() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="group bg-warm-white rounded-2xl shadow-soft overflow-hidden transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-2 border border-beige/50">
-                {/* Ebook/Mockup Card */}
                 <div className="aspect-[4/3] relative bg-gradient-to-br from-beige-light to-sand-light overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative w-32 h-40 bg-warm-white rounded shadow-lg transform group-hover:scale-105 transition-transform duration-500 flex items-center justify-center border border-beige">
@@ -58,7 +60,6 @@ export function FeaturedProducts() {
                       </div>
                     </div>
                   </div>
-                  {/* Hover overlay */}
                   <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors duration-500" />
                 </div>
                 <div className="p-6">

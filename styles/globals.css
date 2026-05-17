@@ -103,4 +103,75 @@
     background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
     opacity: 0.3;
   }
+
+  /* Float animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+
+  /* Twinkle animation */
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .animate-twinkle-slow {
+    animation: twinkle 4s ease-in-out infinite;
+  }
+
+  .animate-twinkle-fast {
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  /* Gentle fade in up */
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  /* Subtle parallax helper */
+  .will-change-transform {
+    will-change: transform;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translateY(-18px) rotate(0.3deg);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

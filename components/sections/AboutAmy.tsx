@@ -7,13 +7,15 @@ import { ArrowRight, Heart, Moon } from "lucide-react";
 
 export function AboutAmy() {
   return (
-    <section className="py-28 lg:py-36 bg-cream-dark relative overflow-hidden">
-      {/* Subtle celestial accents */}
-      <div className="absolute top-32 right-[15%] w-1 h-1 bg-gold rounded-full animate-pulse" />
-      <div className="absolute bottom-24 left-[12%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-pulse" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute top-1/2 right-[8%] w-1 h-1 bg-gold/70 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }} />
+    <section className="py-32 lg:py-40 bg-cream-dark relative overflow-hidden">
+      <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle celestial accents */}
+      <div className="absolute top-36 right-[12%] w-1 h-1 bg-gold rounded-full animate-twinkle" />
+      <div className="absolute bottom-28 left-[10%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-slow" />
+      <div className="absolute top-1/2 right-[6%] w-1 h-1 bg-gold/70 rounded-full animate-twinkle-fast" />
+
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -33,7 +35,6 @@ export function AboutAmy() {
                   </div>
                 </div>
               </div>
-              {/* Decorative element */}
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gold/10 rounded-full blur-2xl" />
             </div>
           </motion.div>

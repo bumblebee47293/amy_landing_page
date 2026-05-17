@@ -15,12 +15,14 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function FreeResources() {
   return (
-    <section className="py-28 lg:py-36 bg-cream-dark relative overflow-hidden">
-      {/* Subtle celestial accents */}
-      <div className="absolute top-24 right-[18%] w-1 h-1 bg-gold rounded-full animate-pulse" />
-      <div className="absolute bottom-28 left-[15%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+    <section className="py-32 lg:py-40 bg-cream-dark relative overflow-hidden">
+      <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle celestial accents */}
+      <div className="absolute top-28 right-[15%] w-1 h-1 bg-gold rounded-full animate-twinkle" />
+      <div className="absolute bottom-32 left-[12%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-slow" />
+
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -11,12 +11,14 @@ export function LatestBlog() {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="py-28 lg:py-36 bg-cream relative overflow-hidden">
-      {/* Subtle celestial accents */}
-      <div className="absolute top-28 left-[10%] w-1 h-1 bg-gold rounded-full animate-pulse" />
-      <div className="absolute bottom-36 right-[12%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+    <section className="py-32 lg:py-40 bg-cream relative overflow-hidden">
+      <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle celestial accents */}
+      <div className="absolute top-32 left-[8%] w-1 h-1 bg-gold rounded-full animate-twinkle" />
+      <div className="absolute bottom-40 right-[10%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-slow" />
+
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +59,6 @@ export function LatestBlog() {
                         </span>
                       </div>
                     </div>
-                    {/* Hover overlay */}
                     <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors duration-500" />
                   </div>
                   <div className="p-7 flex-1 flex flex-col">
