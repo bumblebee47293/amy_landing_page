@@ -6,28 +6,28 @@ import { Quote } from "lucide-react";
 
 export function Testimonials() {
   return (
-    <section className="py-20 lg:py-28 bg-cream">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-[120px] lg:py-[120px] bg-cream">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <span className="text-taupe-dark text-sm font-medium tracking-widest uppercase">
+          <span className="text-gold-muted text-sm font-medium tracking-[0.2em] uppercase">
             Community
           </span>
-          <h2 className="font-serif text-3xl lg:text-4xl font-semibold text-stone-text mt-3">
+          <h2 className="font-serif text-[40px] lg:text-[40px] font-medium text-navy mt-4 tracking-tight">
             What Readers Say
           </h2>
-          <p className="mt-4 text-muted-brown max-w-2xl mx-auto">
+          <p className="mt-6 text-muted-brown max-w-2xl mx-auto text-lg leading-[1.7]">
             Words from the Amy Teaches community about their experience with the
             resources and content.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -36,19 +36,19 @@ export function Testimonials() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="bg-warm-white rounded-2xl shadow-soft p-6 lg:p-8 transition-all duration-300 hover:shadow-soft-lg h-full">
+              <div className="bg-warm-white rounded-[24px] shadow-soft p-8 lg:p-10 transition-all duration-300 hover:shadow-soft-lg h-full border border-beige/50">
                 <Quote className="h-8 w-8 text-sand mb-4" />
-                <p className="text-stone-text leading-relaxed">
+                <p className="text-text-dark leading-[1.7]">
                   {testimonial.content}
                 </p>
                 <div className="mt-6 flex items-center gap-3">
                   <div className="w-10 h-10 bg-sand rounded-full flex items-center justify-center">
-                    <span className="font-serif text-sm font-semibold text-stone-text">
+                    <span className="font-serif text-sm font-medium text-text-dark">
                       {testimonial.name.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <p className="font-medium text-stone-text text-sm">
+                    <p className="font-medium text-text-dark text-sm">
                       {testimonial.name}
                     </p>
                     <p className="text-soft-gray text-xs">

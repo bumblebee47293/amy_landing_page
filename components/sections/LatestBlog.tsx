@@ -11,12 +11,12 @@ export function LatestBlog() {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="py-32 lg:py-40 bg-cream relative overflow-hidden">
+    <section className="py-[120px] lg:py-[120px] bg-cream relative overflow-hidden">
       <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
 
       {/* Subtle celestial accents */}
-      <div className="absolute top-32 left-[8%] w-1 h-1 bg-gold rounded-full animate-twinkle" />
-      <div className="absolute bottom-40 right-[10%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-slow" />
+      <div className="absolute top-32 left-[8%] w-1 h-1 bg-gold rounded-full animate-twinkle opacity-40" />
+      <div className="absolute bottom-40 right-[10%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-slow opacity-40" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
@@ -31,10 +31,10 @@ export function LatestBlog() {
             From the Blog
             <Feather className="w-3.5 h-3.5" />
           </span>
-          <h2 className="font-serif text-3xl lg:text-5xl font-medium text-navy mt-4 tracking-tight">
+          <h2 className="font-serif text-[40px] lg:text-[40px] font-medium text-navy mt-4 tracking-tight">
             Latest Thoughts
           </h2>
-          <p className="mt-6 text-muted-brown max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="mt-6 text-muted-brown max-w-2xl mx-auto text-lg leading-[1.7]">
             Insights on language learning, productivity, self-growth, and living
             with intention.
           </p>
@@ -50,7 +50,7 @@ export function LatestBlog() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Link href={`/blog/${post.slug}/`} className="group block">
-                <div className="bg-warm-white rounded-2xl shadow-soft overflow-hidden transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-2 h-full flex flex-col border border-beige/50">
+                <div className="bg-[#FFFDF9] rounded-[24px] shadow-soft overflow-hidden transition-all duration-500 hover:shadow-glow hover:-translate-y-1 h-full flex flex-col border border-beige/50">
                   <div className="aspect-[16/10] relative bg-gradient-to-br from-beige-light to-sand-light overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
@@ -82,7 +82,7 @@ export function LatestBlog() {
                         {formatDate(post.date)}
                       </span>
                       <span className="text-sm font-medium text-navy group-hover:text-gold-muted transition-colors flex items-center">
-                        Read More
+                        Read Article
                         <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </span>
                     </div>
@@ -101,7 +101,7 @@ export function LatestBlog() {
           className="text-center mt-16"
         >
           <Link href="/blog/">
-            <Button variant="outline" className="border-gold/30 text-navy hover:bg-gold/5 hover:border-gold/50 px-8">
+            <Button variant="outline" className="border-navy text-navy hover:bg-navy/[0.03] hover:border-navy/70 px-8">
               View All Posts
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

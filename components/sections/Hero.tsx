@@ -44,37 +44,11 @@ function StarField() {
             height: star.size,
             animationDelay: `${star.delay}s`,
             animationDuration: `${star.duration}s`,
-            opacity: 0.2,
+            opacity: 0.15,
           }}
         />
       ))}
     </>
-  );
-}
-
-/* Soft botanical leaf — decorative SVG overlay */
-function BotanicalLeaf({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 200 200"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <path
-        d="M100 180C100 180 40 140 40 80C40 40 70 20 100 20C130 20 160 40 160 80C160 140 100 180 100 180Z"
-        stroke="currentColor"
-        strokeWidth="0.5"
-        fill="currentColor"
-        fillOpacity="0.03"
-      />
-      <path
-        d="M100 180V20"
-        stroke="currentColor"
-        strokeWidth="0.5"
-        strokeOpacity="0.08"
-      />
-    </svg>
   );
 }
 
@@ -84,84 +58,76 @@ export function Hero() {
       {/* Atmospheric background layers */}
       <div className="absolute inset-0 bg-celestial-glow" />
 
-      {/* Large soft glow behind artwork */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] bg-gold/6 rounded-full blur-[100px]" />
+      {/* Soft radial gradient corners */}
+      <div className="absolute top-0 left-0 w-[60%] h-[60%] pointer-events-none" style={{ background: 'radial-gradient(ellipse at top left, rgba(11,21,48,0.03) 0%, transparent 60%)' }} />
+      <div className="absolute bottom-0 right-0 w-[50%] h-[50%] pointer-events-none" style={{ background: 'radial-gradient(ellipse at bottom right, rgba(11,21,48,0.02) 0%, transparent 60%)' }} />
+
+      {/* Large soft glow behind artwork — very subtle */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] bg-gold/[0.04] rounded-full blur-[120px]" />
 
       {/* Secondary ambient glows */}
-      <div className="absolute top-[20%] right-[5%] w-72 h-72 bg-navy/4 rounded-full blur-[80px]" />
-      <div className="absolute bottom-[15%] left-[8%] w-64 h-64 bg-gold/4 rounded-full blur-[80px]" />
+      <div className="absolute top-[20%] right-[5%] w-72 h-72 bg-navy/[0.03] rounded-full blur-[100px]" />
+      <div className="absolute bottom-[15%] left-[8%] w-64 h-64 bg-gold/[0.03] rounded-full blur-[100px]" />
 
       {/* Star field */}
       <StarField />
 
-      {/* Botanical decorations */}
-      <BotanicalLeaf className="absolute top-[10%] left-[-5%] w-48 h-48 lg:w-72 lg:h-72 text-gold rotate-12 opacity-60 pointer-events-none" />
-      <BotanicalLeaf className="absolute bottom-[5%] right-[-3%] w-40 h-40 lg:w-64 lg:h-64 text-gold -rotate-45 opacity-50 pointer-events-none" />
-
       {/* Noise texture */}
       <div className="absolute inset-0 noise-texture pointer-events-none" />
 
-      {/* 
-        Content — optically centered upward.
-        Using negative translate to shift the visual mass above geometric center,
-        which feels more balanced to the human eye (optical centering).
-      */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 pt-20 pb-16 flex flex-col items-center text-center transform -translate-y-6 lg:-translate-y-10">
-        
-        {/* Large Decorative Brand Illustration */}
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 pt-24 pb-20 flex flex-col items-center text-center">
+
+        {/* Large Decorative Brand Illustration — subtle and blurred */}
         <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative mb-10 lg:mb-12"
+          className="relative mb-12 lg:mb-16"
         >
-          <div className="relative w-72 sm:w-96 lg:w-[28rem] xl:w-[32rem] aspect-[3/2] animate-float will-change-transform">
-            {/* Rectangular glow */}
-            <div className="absolute inset-[-16px] lg:inset-[-24px] bg-gold/8 blur-2xl" />
-            <div className="absolute inset-[-6px] lg:inset-[-10px] bg-gold/10 blur-xl" />
-
+          <div className="relative w-64 sm:w-80 lg:w-96 aspect-[3/2] animate-float will-change-transform opacity-[0.1] blur-[2px]">
             <Image
               src="/images/logo.jpg"
               alt="Amy Teaches"
               fill
               className="object-contain"
               priority
-              sizes="(max-width: 640px) 288px, (max-width: 1024px) 384px, (max-width: 1280px) 448px, 512px"
+              sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
             />
           </div>
         </motion.div>
 
-        {/* Brand Name */}
+        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium text-navy tracking-tight leading-[0.95]"
+          className="font-serif text-[42px] sm:text-5xl lg:text-[64px] font-semibold text-navy tracking-tight leading-[1.1] max-w-3xl"
         >
-          Amy Teaches
+          Soft learning, thoughtful growth, and digital tools for a calmer life.
         </motion.h1>
 
-        {/* Tagline */}
+        {/* Subtext */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="mt-6 lg:mt-8 text-xl sm:text-2xl lg:text-3xl text-muted-brown font-light tracking-wide"
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="mt-8 lg:mt-10 text-lg sm:text-xl text-muted-brown font-light tracking-wide max-w-2xl leading-[1.7]"
         >
-          Learn softly. Grow consistently.
+          Digital products, blog posts, and resources designed to help you grow consistently without overwhelm.
         </motion.p>
 
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="mt-10 lg:mt-12 flex flex-col sm:flex-row items-center gap-4"
+          transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="mt-12 lg:mt-14 flex flex-col sm:flex-row items-center gap-4"
         >
           <Link href="/shop/">
             <Button size="lg" className="group bg-navy hover:bg-navy-light text-cream px-8 shadow-soft hover:shadow-soft-lg transition-all duration-300">
               <BookOpen className="mr-2 h-5 w-5" />
-              Explore Resources
+              Explore Products
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </Link>
@@ -169,7 +135,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="border-gold/30 text-navy hover:bg-gold/5 hover:border-gold/50 px-8 transition-all duration-300"
+              className="border-navy text-navy hover:bg-navy/[0.03] hover:border-navy/70 px-8 transition-all duration-300"
             >
               Read the Blog
             </Button>

@@ -2,19 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { products } from "@/lib/data";
 import { Button } from "@/components/ui/Button";
 import { ShoppingBag, ArrowRight, Star } from "lucide-react";
 
 export function FeaturedProducts() {
   return (
-    <section className="py-32 lg:py-40 bg-cream relative overflow-hidden">
+    <section className="py-[120px] lg:py-[120px] bg-cream relative overflow-hidden">
       <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
 
       {/* Subtle celestial accents */}
-      <div className="absolute top-24 right-[8%] w-1.5 h-1.5 bg-gold rounded-full animate-twinkle" />
-      <div className="absolute top-40 left-[6%] w-1 h-1 bg-gold/60 rounded-full animate-twinkle-slow" />
-      <div className="absolute bottom-36 right-[12%] w-1 h-1 bg-gold/80 rounded-full animate-twinkle-fast" />
+      <div className="absolute top-24 right-[8%] w-1.5 h-1.5 bg-gold rounded-full animate-twinkle opacity-40" />
+      <div className="absolute top-40 left-[6%] w-1 h-1 bg-gold/60 rounded-full animate-twinkle-slow opacity-40" />
+      <div className="absolute bottom-36 right-[12%] w-1 h-1 bg-gold/80 rounded-full animate-twinkle-fast opacity-40" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
@@ -29,10 +30,10 @@ export function FeaturedProducts() {
             Digital Products
             <Star className="w-3.5 h-3.5" />
           </span>
-          <h2 className="font-serif text-3xl lg:text-5xl font-medium text-navy mt-4 tracking-tight">
+          <h2 className="font-serif text-[40px] lg:text-[40px] font-medium text-navy mt-4 tracking-tight">
             Curated for Your Growth
           </h2>
-          <p className="mt-6 text-muted-brown max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="mt-6 text-muted-brown max-w-2xl mx-auto text-lg leading-[1.7]">
             Thoughtfully designed tools to support your learning journey and
             daily practice.
           </p>
@@ -47,10 +48,10 @@ export function FeaturedProducts() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="group bg-warm-white rounded-2xl shadow-soft overflow-hidden transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-2 border border-beige/50">
+              <div className="group bg-warm-white rounded-[24px] shadow-soft overflow-hidden transition-all duration-500 hover:shadow-glow hover:-translate-y-1 border border-beige/50">
                 <div className="aspect-[4/3] relative bg-gradient-to-br from-beige-light to-sand-light overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-32 h-40 bg-warm-white rounded shadow-lg transform group-hover:scale-105 transition-transform duration-500 flex items-center justify-center border border-beige">
+                    <div className="relative w-28 h-40 bg-warm-white rounded-lg shadow-lg transform group-hover:scale-105 transition-transform duration-500 flex items-center justify-center border border-beige">
                       <div className="text-center px-3">
                         <span className="font-serif text-4xl text-gold font-medium">
                           {product.title.charAt(0)}
@@ -101,7 +102,7 @@ export function FeaturedProducts() {
           className="text-center mt-16"
         >
           <Link href="/shop/">
-            <Button variant="outline" className="border-gold/30 text-navy hover:bg-gold/5 hover:border-gold/50 px-8">
+            <Button variant="outline" className="border-navy text-navy hover:bg-navy/[0.03] hover:border-navy/70 px-8">
               View All Products
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

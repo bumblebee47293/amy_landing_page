@@ -15,12 +15,12 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function FreeResources() {
   return (
-    <section className="py-32 lg:py-40 bg-cream-dark relative overflow-hidden">
+    <section className="py-[120px] lg:py-[120px] bg-cream-dark relative overflow-hidden">
       <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
 
       {/* Subtle celestial accents */}
-      <div className="absolute top-28 right-[15%] w-1 h-1 bg-gold rounded-full animate-twinkle" />
-      <div className="absolute bottom-32 left-[12%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-slow" />
+      <div className="absolute top-28 right-[15%] w-1 h-1 bg-gold rounded-full animate-twinkle opacity-40" />
+      <div className="absolute bottom-32 left-[12%] w-1.5 h-1.5 bg-gold/50 rounded-full animate-twinkle-slow opacity-40" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
@@ -35,10 +35,10 @@ export function FreeResources() {
             Free Downloads
             <Gift className="w-3.5 h-3.5" />
           </span>
-          <h2 className="font-serif text-3xl lg:text-5xl font-medium text-navy mt-4 tracking-tight">
+          <h2 className="font-serif text-[40px] lg:text-[40px] font-medium text-navy mt-4 tracking-tight">
             Resources to Get Started
           </h2>
-          <p className="mt-6 text-muted-brown max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="mt-6 text-muted-brown max-w-2xl mx-auto text-lg leading-[1.7]">
             Free tools and templates to support your learning journey. No
             strings attached.
           </p>
@@ -55,7 +55,7 @@ export function FreeResources() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="bg-warm-white rounded-2xl shadow-soft p-7 transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-2 h-full flex flex-col border border-beige/50">
+                <div className="bg-warm-white rounded-[24px] shadow-soft p-7 transition-all duration-500 hover:shadow-glow hover:-translate-y-1 h-full flex flex-col border border-beige/50">
                   <div className="w-12 h-12 bg-beige-light rounded-xl flex items-center justify-center mb-5 border border-beige/50">
                     <Icon className="h-5 w-5 text-gold-muted" />
                   </div>

@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, Twitter, Youtube, Mail, ArrowUpRight, Star } from "lucide-react";
+import { Instagram, Twitter, Youtube, Mail, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-cream-dark border-t border-gold/10 relative overflow-hidden">
+    <footer className="bg-navy relative overflow-hidden">
       {/* Subtle celestial accents */}
       <div className="absolute top-16 right-[10%] w-1 h-1 bg-gold/50 rounded-full animate-twinkle" />
       <div className="absolute bottom-24 left-[8%] w-1 h-1 bg-gold/30 rounded-full animate-twinkle-slow" />
@@ -29,7 +29,7 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="mt-5 text-soft-gray text-sm leading-[1.8] max-w-sm">
+            <p className="mt-5 text-cream/60 text-sm leading-[1.8] max-w-sm">
               A calm space for learning, productivity, and self-development.
               Soft learning, thoughtful growth, and digital resources for a
               calmer life.
@@ -47,7 +47,7 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-beige-light border border-beige/50 flex items-center justify-center text-soft-gray hover:text-navy hover:bg-gold/10 hover:border-gold/20 transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-cream/10 border border-cream/20 flex items-center justify-center text-cream/60 hover:text-cream hover:bg-cream/20 hover:border-cream/30 transition-all duration-300"
                 >
                   <social.icon size={18} />
                 </a>
@@ -57,21 +57,20 @@ export function Footer() {
 
           {/* Navigation Links */}
           <div className="md:col-span-3 md:col-start-7">
-            <h4 className="font-serif text-base font-medium text-navy mb-6 tracking-wide">
+            <h4 className="font-serif text-base font-medium text-cream mb-6 tracking-wide">
               Navigate
             </h4>
             <ul className="space-y-4">
               {[
                 { href: "/", label: "Home" },
                 { href: "/blog/", label: "Blog" },
-                { href: "/shop/", label: "Shop" },
+                { href: "/shop/", label: "Products" },
                 { href: "/about/", label: "About" },
-                { href: "/resources/", label: "Resources" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-soft-gray hover:text-navy transition-colors duration-300 text-sm flex items-center group"
+                    className="text-cream/60 hover:text-cream transition-colors duration-300 text-sm flex items-center group"
                   >
                     {link.label}
                     <ArrowUpRight className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -83,16 +82,16 @@ export function Footer() {
 
           {/* Newsletter mini */}
           <div className="md:col-span-3">
-            <h4 className="font-serif text-base font-medium text-navy mb-6 tracking-wide">
+            <h4 className="font-serif text-base font-medium text-cream mb-6 tracking-wide">
               Newsletter
             </h4>
-            <p className="text-soft-gray text-sm leading-relaxed">
+            <p className="text-cream/60 text-sm leading-relaxed">
               Get gentle inspiration and thoughtful lessons delivered to your
               inbox.
             </p>
             <Link
               href="#newsletter"
-              className="inline-flex items-center mt-4 text-sm font-medium text-navy hover:text-gold-muted transition-colors group"
+              className="inline-flex items-center mt-4 text-sm font-medium text-cream hover:text-gold transition-colors group"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -101,7 +100,7 @@ export function Footer() {
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="w-4 h-4 mr-2 text-gold-muted"
+                className="w-4 h-4 mr-2 text-gold/70"
               >
                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
               </svg>
@@ -112,14 +111,12 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-beige/50 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-soft-gray text-sm">
+        <div className="mt-16 pt-8 border-t border-cream/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-cream/50 text-sm">
             &copy; {currentYear} Amy Teaches. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-soft-gray text-sm">
-            <Star className="w-3 h-3 text-gold/50" />
+          <div className="flex items-center gap-2 text-cream/50 text-sm">
             <span>Made with care for curious minds</span>
-            <Star className="w-3 h-3 text-gold/50" />
           </div>
         </div>
       </div>

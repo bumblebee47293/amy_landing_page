@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/shop/", label: "Products" },
   { href: "/blog/", label: "Blog" },
-  { href: "/shop/", label: "Shop" },
   { href: "/about/", label: "About" },
 ];
 
@@ -31,12 +31,12 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-cream/80 backdrop-blur-xl shadow-[0_1px_20px_-4px_rgba(11,29,58,0.06)]"
-          : "bg-transparent"
+          ? "bg-[rgba(248,244,238,0.7)] backdrop-blur-[12px] shadow-[0_1px_20px_-4px_rgba(11,21,48,0.06)]"
+          : "bg-[rgba(248,244,238,0.7)] backdrop-blur-[12px]"
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-14 lg:h-16">
+      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Small logo image */}
           <Link href="/" className="flex items-center group">
             <div className="relative w-20 sm:w-24 aspect-[4/3] overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
@@ -52,12 +52,12 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-12">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-sm font-medium tracking-wide text-stone-muted hover:text-navy transition-colors duration-300 group"
+                className="relative text-sm font-medium tracking-[0.3px] text-stone-muted hover:text-navy transition-colors duration-300 group"
               >
                 {link.label}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gold transition-all duration-300 ease-out group-hover:w-full" />
@@ -79,11 +79,11 @@ export function Header() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "md:hidden bg-cream/95 backdrop-blur-xl overflow-hidden transition-all duration-500",
+          "md:hidden bg-[rgba(248,244,238,0.95)] backdrop-blur-[12px] overflow-hidden transition-all duration-500",
           mobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <nav className="px-6 py-6 space-y-4">
+        <nav className="px-8 py-6 space-y-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}

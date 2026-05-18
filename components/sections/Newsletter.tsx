@@ -19,8 +19,10 @@ export function Newsletter() {
   };
 
   return (
-    <section id="newsletter" className="py-32 lg:py-40 bg-navy relative overflow-hidden">
-      <div className="absolute inset-0 bg-celestial-glow opacity-50 pointer-events-none" />
+    <section id="newsletter" className="py-[120px] lg:py-[120px] relative overflow-hidden">
+      {/* Soft navy gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-navy-light" />
+      <div className="absolute inset-0 bg-celestial-glow opacity-30 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-3xl" />
 
       {/* Stars */}
@@ -43,10 +45,10 @@ export function Newsletter() {
             Stay Connected
             <Star className="w-3.5 h-3.5" />
           </span>
-          <h2 className="font-serif text-3xl lg:text-5xl font-medium text-cream mt-4 tracking-tight">
+          <h2 className="font-serif text-[40px] lg:text-[40px] font-medium text-cream mt-4 tracking-tight">
             Join the Newsletter
           </h2>
-          <p className="mt-6 text-cream/70 leading-relaxed max-w-xl mx-auto text-lg">
+          <p className="mt-6 text-cream/70 leading-[1.7] max-w-xl mx-auto text-lg">
             Join the Amy Teaches newsletter for thoughtful lessons and gentle
             inspiration delivered to your inbox.
           </p>
@@ -60,14 +62,14 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
-              className="flex-1 px-6 py-3.5 rounded-full bg-cream/10 border border-gold/20 text-cream placeholder:text-cream/40 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
+              className="flex-1 px-6 py-4 rounded-full bg-cream/10 border border-gold/20 text-cream placeholder:text-cream/40 focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
               required
               aria-label="Email address"
             />
             <Button
               type="submit"
               disabled={status === "success"}
-              className="whitespace-nowrap bg-gold hover:bg-gold-light text-navy font-medium px-6 transition-colors"
+              className="whitespace-nowrap bg-gold hover:bg-gold-light text-navy font-medium px-7 py-4 transition-colors"
             >
               {status === "success" ? (
                 <>
