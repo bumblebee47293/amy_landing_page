@@ -85,7 +85,7 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="relative mb-12 lg:mb-16"
         >
-          <div className="relative w-64 sm:w-80 lg:w-96 aspect-[3/2] animate-float will-change-transform opacity-[0.1] blur-[2px]">
+          <div className="relative w-64 sm:w-80 lg:w-96 aspect-[3/2] animate-float will-change-transform opacity-[0.6]">
             <Image
               src="/images/logo.jpg"
               alt="Amy Teaches"
