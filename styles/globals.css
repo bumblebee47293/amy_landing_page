@@ -158,6 +158,12 @@
   .will-change-transform {
     will-change: transform;
   }
+
+  /* Blur corners effect - circular fade */
+  .blur-corners {
+    -webkit-mask-image: radial-gradient(circle at center, black 40%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.5) 72%, transparent 90%);
+    mask-image: radial-gradient(circle at center, black 40%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.5) 72%, transparent 90%);
+  }
 }
 
 /* Keyframe Animations */

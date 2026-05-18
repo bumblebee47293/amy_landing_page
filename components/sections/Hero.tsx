@@ -86,14 +86,29 @@ export function Hero() {
           className="relative mb-12 lg:mb-16"
         >
           <div className="relative w-64 sm:w-80 lg:w-96 aspect-[3/2] animate-float will-change-transform opacity-[0.8]">
-            <Image
-              src="/images/logo.jpg"
-              alt="Amy Teaches"
-              fill
-              className="object-contain"
-              priority
-              sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
-            />
+            {/* Sharp layer — center and edges */}
+            <div className="absolute inset-0"
+                 style={{ maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)', maskComposite: 'intersect', WebkitMaskComposite: 'source-in' }}>
+              <Image
+                src="/images/logo.jpg"
+                alt="Amy Teaches"
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
+              />
+            </div>
+            {/* Blurred layer — corners only */}
+            <div className="absolute inset-0 blur-[6px]"
+                 style={{ maskImage: 'linear-gradient(135deg, black 0%, transparent 25%, transparent 75%, black 100%), linear-gradient(225deg, black 0%, transparent 25%, transparent 75%, black 100%)', WebkitMaskImage: 'linear-gradient(135deg, black 0%, transparent 25%, transparent 75%, black 100%), linear-gradient(225deg, black 0%, transparent 25%, transparent 75%, black 100%)', maskComposite: 'add', WebkitMaskComposite: 'source-over' }}>
+              <Image
+                src="/images/logo.jpg"
+                alt=""
+                fill
+                className="object-contain"
+                sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 384px"
+              />
+            </div>
           </div>
         </motion.div>
 

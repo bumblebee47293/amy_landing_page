@@ -39,12 +39,12 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Small logo image */}
           <Link href="/" className="flex items-center group">
-            <div className="relative w-20 sm:w-24 aspect-[4/3] overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
+            <div className="relative w-20 sm:w-24 aspect-[4/3] overflow-hidden transition-transform duration-300 group-hover:scale-[1.02] blur-corners bg-cream">
               <Image
                 src="/images/logo.jpg"
                 alt="Amy Teaches"
                 fill
-                className="object-contain"
+                className="object-contain opacity-[0.88]"
                 sizes="96px"
                 priority
               />
